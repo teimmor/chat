@@ -134,7 +134,19 @@ class Login extends Component {
 					p={40}
 				>
 					<InputLabel fontSize="0.75rem">
-						Nickname
+						NICKNAME
+					</InputLabel>
+		
+					<CustomInput
+						bg="rgba(0,0,0,.1)"
+						px={10}
+						mb={8}
+						borderRadius={3}
+						onChange={e => this.setState({ nickname: e.target.value })}
+					/>
+
+					<InputLabel fontSize="0.75rem">
+						PASSWORD
 					</InputLabel>
 
 					<CustomInput
@@ -142,7 +154,7 @@ class Login extends Component {
 						px={10}
 						mb={8}
 						borderRadius={3}
-						onChange={e => this.setState({ nickname: e.target.value })}
+						onChange={e => this.setState({ password: e.target.value })}
 					/>
 
 					<LoginButton
@@ -165,3 +177,4 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(Login);
+
